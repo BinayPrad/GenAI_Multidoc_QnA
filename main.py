@@ -45,7 +45,7 @@ elif uploaded_files:
   #vstore with metadata. Here we will store page numbers.
   vStore = Chroma.from_texts(documents, embeddings, metadatas=[{"source": s} for s in sources])
   #deciding model
-  model_name = "gpt-3.5-turbo"
+  model_name = "text-embedding-ada-002"
   # model_name = "gpt-4"
 
   retriever = vStore.as_retriever()
